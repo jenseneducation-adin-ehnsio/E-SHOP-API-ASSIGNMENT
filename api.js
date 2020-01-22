@@ -10,21 +10,33 @@ router.get("/", async (req, res) => {
   res.send(data);
 });
 
+router.post("/addtocart/:id", async (req, res) => {
+  const product = await getProduct(req.params.id);
+  const addedToCart = await addToCart(product);
+
+  let message = {
+    success: true,
+    message: "Product added to cart"
+  };
+
+  message.data = addedToCart[addedToCart.length - 1];
+  res.send(message);
+});
+
 const getProducts = async () => {
   return await db.get("products");
 };
 
-router.post("/addtocart/:id", async (request, response) => {
-  const productId = request.params.id;
+const getProduct = async id => {
+  return await db.get(`products[${id}]`);
+};
 
-  let message = {
-    success: true,
-    message: "Product added"
-  };
-
-  const addedProduct = await addProduct(productId);
-  message.data = addedProduct[res.length - 1];
-  res.send(message);
-});
+const addToCart = async product => {
+  const cartItem = await db
+    .get("cart")
+    .push(product)
+    .write();
+  return cartItem;
+};
 
 module.exports = router;

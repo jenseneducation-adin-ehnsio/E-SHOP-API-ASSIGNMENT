@@ -16,7 +16,7 @@ const initiateDb = () => {
   }
 };
 
-app.use("/store", api); // Uses routes
+app.use("/store", api); // Route from api.js
 
 // LISTENS AT PORT 7000 AND INITIATES DATABASES
 app.listen(port, () => {
