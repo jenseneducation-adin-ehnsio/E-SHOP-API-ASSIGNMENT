@@ -1,0 +1,35 @@
+{
+  "products": [
+    {
+      "name": "Apple iPhone XS 64GB",
+      "price": "6950",
+      "img": "https://placeimg.com/https://placeimg.com/640/480/tech"
+    },
+    {
+      "name": "Apple AirPods (2nd Generation)",
+      "price": "1529",
+      "img": "https://placeimg.com/https://placeimg.com/640/480/tech"
+    },
+    {
+      "name": "LG OLED55B9",
+      "price": "12990",
+      "img": "https://placeimg.com/https://placeimg.com/640/480/tech"
+    },
+    {
+      "name": "Xiaomi Mu RoboRock S6",
+      "price": "5332",
+      "img": "https://placeimg.com/https://placeimg.com/640/480/tech"
+    },
+    {
+      "name": "Google Wifi (3-pack)",
+      "price": "3179",
+      "img": "https://placeimg.com/https://placeimg.com/640/480/tech"
+    },
+    {
+      "name": "Samsung Galaxy Tab A 10.1 SM-T510 32GB",
+      "price": "1990",
+      "img": "https://placeimg.com/https://placeimg.com/640/480/tech"
+    }
+  ],
+  "cart": []
+}

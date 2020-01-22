@@ -1,0 +1,28 @@
+{
+  "name": "e-shop-api-assignment",
+  "version": "1.0.0",
+  "description": "Inlämningsuppgift 1 Instruktioner I denna inlämningsuppgift ska du bygga en Node.JS-applikation för en e-handelssida. Du ska skapa upp ett API samt en databas med lowdb som ska hantera din e-handelssida. Denna inlämningsuppgift ska dock inte ha någon HTML, CSS eller JavaScript (i klienten). Utan det kommer i nästa inlämningsuppgift där du ska använda dig av ditt API från denna uppgift.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "nodemon": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jenseneducation-adin-ehnsio/E-SHOP-API-ASSIGNMENT.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jenseneducation-adin-ehnsio/E-SHOP-API-ASSIGNMENT/issues"
+  },
+  "homepage": "https://github.com/jenseneducation-adin-ehnsio/E-SHOP-API-ASSIGNMENT#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "lowdb": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
