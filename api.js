@@ -1,42 +1,54 @@
-var express = require("express");
-var router = express.Router();
-const lowdb = require("lowdb");
-const FileSync = require("lowdb/adapters/FileSync");
-const adapter = new FileSync("database.json");
-const db = lowdb(adapter);
+const express = require("express");
+const router = express.Router();
+const {
+  getProducts,
+  getProduct,
+  getCart,
+  addToCart,
+  removeFromCart
+} = require("./database");
 
 router.get("/", async (req, res) => {
   const data = await getProducts();
   res.send(data);
 });
 
-router.post("/addtocart/:id", async (req, res) => {
-  const product = await getProduct(req.params.id);
-  const addedToCart = await addToCart(product);
-
-  let message = {
-    success: true,
-    message: "Product added to cart"
-  };
-
-  message.data = addedToCart[addedToCart.length - 1];
-  res.send(message);
+router.get("/cart", async (req, res) => {
+  const data = await getCart();
+  res.send(data);
 });
 
-const getProducts = async () => {
-  return await db.get("products");
-};
+router
+  .route("/cart/:id")
+  .post(async (req, res) => {
+    const product = await getProduct(req.params.id);
+    if (!product) {
+      res.send("Product does not exist");
+    } else {
+      await addToCart(product);
 
-const getProduct = async id => {
-  return await db.get(`products[${id}]`);
-};
+      let message = {
+        success: true,
+        message: "Product added to cart",
+        data: product
+      };
 
-const addToCart = async product => {
-  const cartItem = await db
-    .get("cart")
-    .push(product)
-    .write();
-  return cartItem;
-};
+      res.send(message);
+    }
+  })
+  .delete(async (req, res) => {
+    const deletedItem = await removeFromCart(req.params.id);
+    if (!deletedItem) {
+      res.send("No such item in your cart");
+    } else {
+      let message = {
+        success: true,
+        message: "Product removed to cart"
+      };
+
+      message.data = deletedItem;
+      res.send(message);
+    }
+  });
 
 module.exports = router;
