@@ -22,6 +22,7 @@ router
   .route("/cart/:id")
   .post(async (req, res) => {
     const product = await getProduct(req.params.id);
+
     if (!product) {
       res.send("Product does not exist");
     } else {
@@ -38,15 +39,16 @@ router
   })
   .delete(async (req, res) => {
     const deletedItem = await removeFromCart(req.params.id);
-    if (!deletedItem) {
+
+    if (deletedItem.length == 0) {
       res.send("No such item in your cart");
     } else {
       let message = {
         success: true,
-        message: "Product removed to cart"
+        message: "Product removed from cart",
+        data: deletedItem
       };
 
-      message.data = deletedItem;
       res.send(message);
     }
   });
