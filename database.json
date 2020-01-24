@@ -4,51 +4,93 @@
       "id": "1",
       "name": "Apple iPhone XS 64GB",
       "price": "6950",
-      "img": "https://placeimg.com/https://placeimg.com/640/480/tech"
+      "img": "https://placeimg.com/640/480/tech?t=1579866796403"
     },
     {
       "id": "2",
       "name": "Apple AirPods (2nd Generation)",
       "price": "1529",
-      "img": "https://placeimg.com/https://placeimg.com/640/480/tech"
+      "img": "https://placeimg.com/640/480/tech?t=1579866618706"
     },
     {
       "id": "3",
       "name": "LG OLED55B9",
       "price": "12990",
-      "img": "https://placeimg.com/https://placeimg.com/640/480/tech"
+      "img": "https://placeimg.com/640/480/tech?t=1579866631415"
     },
     {
       "id": "4",
       "name": "Xiaomi Mu RoboRock S6",
       "price": "5332",
-      "img": "https://placeimg.com/https://placeimg.com/640/480/tech"
+      "img": "https://placeimg.com/640/480/tech?t=1579866655038"
     },
     {
       "id": "5",
       "name": "Google Wifi (3-pack)",
       "price": "3179",
-      "img": "https://placeimg.com/https://placeimg.com/640/480/tech"
+      "img": "https://placeimg.com/640/480/tech/12"
     },
     {
       "id": "6",
       "name": "Samsung Galaxy Tab A 10.1 SM-T510 32GB",
       "price": "1990",
-      "img": "https://placeimg.com/https://placeimg.com/640/480/tech"
+      "img": "https://placeimg.com/640/480/tech/3"
     }
   ],
   "cart": [
     {
-      "id": "3",
+      "id": "ZeighZuH",
       "name": "LG OLED55B9",
       "price": "12990",
-      "img": "https://placeimg.com/https://placeimg.com/640/480/tech"
+      "img": "https://placeimg.com/640/480/tech?t=1579866631415"
     },
     {
-      "id": "3",
+      "id": "sGlzbjnd",
       "name": "LG OLED55B9",
       "price": "12990",
-      "img": "https://placeimg.com/https://placeimg.com/640/480/tech"
+      "img": "https://placeimg.com/640/480/tech?t=1579866631415"
+    },
+    {
+      "id": "sEryEv6A",
+      "name": "LG OLED55B9",
+      "price": "12990",
+      "img": "https://placeimg.com/640/480/tech?t=1579866631415"
+    },
+    {
+      "id": "xjZr4lin",
+      "name": "LG OLED55B9",
+      "price": "12990",
+      "img": "https://placeimg.com/640/480/tech?t=1579866631415"
+    },
+    {
+      "id": "TUi9IYUc",
+      "name": "LG OLED55B9",
+      "price": "12990",
+      "img": "https://placeimg.com/640/480/tech?t=1579866631415"
+    },
+    {
+      "id": "KtNSbIMw",
+      "name": "Apple AirPods (2nd Generation)",
+      "price": "1529",
+      "img": "https://placeimg.com/640/480/tech?t=1579866618706"
+    },
+    {
+      "id": "ngkULs_R",
+      "name": "Apple AirPods (2nd Generation)",
+      "price": "1529",
+      "img": "https://placeimg.com/640/480/tech?t=1579866618706"
+    },
+    {
+      "id": "8zSrJepw",
+      "name": "Apple AirPods (2nd Generation)",
+      "price": "1529",
+      "img": "https://placeimg.com/640/480/tech?t=1579866618706"
+    },
+    {
+      "id": "E1ZnjhSB",
+      "name": "Google Wifi (3-pack)",
+      "price": "3179",
+      "img": "https://placeimg.com/640/480/tech/12"
     }
   ]
 }
