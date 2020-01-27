@@ -3,7 +3,6 @@ const lowdb = require("lowdb");
 const FileSync = require("lowdb/adapters/FileSync");
 const adapter = new FileSync("database.json");
 const db = lowdb(adapter);
-const shortid = require("shortid");
 
 // Returns all objects from the array "products" in database.json
 const getProducts = async () => {
@@ -20,19 +19,17 @@ const getProduct = async id => {
   return await db
     .get("products")
     .find({ id: id }) // Gets the product with the right id
-    .cloneDeep() // Creates a clone of the object
     .value();
 };
 
 // Adds the object "item"  to the "cart" array in database.json
 const addToCart = async cartItem => {
-  cartItem.id = shortid.generate(); // Gives cart-item unique id
   const pushtoCart = await db
     .get("cart")
     .push(cartItem)
     .write();
 
-  return cartItem; //returns the latest added item
+  return pushtoCart[pushtoCart.length - 1]; //returns the latest added item
 };
 
 // Removes all the objects with the requested id from database.json

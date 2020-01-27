@@ -23,7 +23,7 @@ router.get("/cart", async (req, res) => {
 
 //Endpoint "cart/add/:id" adds item to cart with a post request
 router.post("/cart/add/:id", async (req, res) => {
-  const item = await getProduct(req.params.id);
+  const item = await getProduct(req.params.id); //Collects the product to be added
 
   //Checks if item exists and sends a 404 if not
   if (!item) {
