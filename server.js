@@ -1,14 +1,14 @@
 // Imports
 const express = require("express");
 const app = express();
+let routes = require("./modules/routes");
+const db = require("./modules/init-db");
 const port = process.env.PORT || 7000;
-let router = require("./api/router");
-const initDatabase = require("./api/init-db");
 
-app.use("/", router); // Uses endpoints from router.js
+app.use("/", routes); // Uses endpoints from router.js
 
 // LISTENS AT PORT 7000 AND INITIATES DATABASES
 app.listen(port, () => {
   console.log("Server started on port: ", port);
-  initDatabase(); // INITIATE database.json if it does not exist
+  db.initDatabase(); // INITIATE database.json if it does not exist
 });

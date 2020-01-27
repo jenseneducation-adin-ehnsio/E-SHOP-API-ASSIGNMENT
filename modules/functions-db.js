@@ -24,13 +24,26 @@ const getProduct = async id => {
 
 // Adds the object "item"  to the "cart" array in database.json
 const addToCart = async cartItem => {
-  const pushtoCart = await db
-    .get("cart")
-    .push(cartItem)
-    .write();
+  const itemStatus = await checkIfAdded(cartItem.id);
 
-  return pushtoCart[pushtoCart.length - 1]; //returns the latest added item
+  if (!itemStatus) {
+    // Adds product if not already in cart
+    const pushtoCart = await db
+      .get("cart")
+      .push(cartItem)
+      .write();
+
+    return pushtoCart[pushtoCart.length - 1]; //returns the latest added item
+  } else return null; // Returns null (nothing added)
 };
+
+// Checks if item is already in cart
+async function checkIfAdded(id) {
+  return await db
+    .get("cart")
+    .find({ id: id })
+    .value();
+}
 
 // Removes all the objects with the requested id from database.json
 const removeFromCart = async id => {

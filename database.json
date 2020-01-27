@@ -37,5 +37,18 @@
       "img": "https://placeimg.com/640/480/tech/3"
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": "1",
+      "name": "Apple iPhone XS 64GB",
+      "price": "6950",
+      "img": "https://placeimg.com/640/480/tech?t=1579866796403"
+    },
+    {
+      "id": "2",
+      "name": "Apple AirPods (2nd Generation)",
+      "price": "1529",
+      "img": "https://placeimg.com/640/480/tech?t=1579866618706"
+    }
+  ]
 }
