@@ -1,5 +1,3 @@
-# E-SHOP-API-ASSIGNMENT
-
 Inlämningsuppgift 1
 Instruktioner
 I denna inlämningsuppgift ska du bygga en Node.JS-applikation för en e-handelssida. Du ska skapa upp ett API samt en databas med lowdb som ska hantera din e-handelssida. Denna inlämningsuppgift ska dock inte ha någon HTML, CSS eller JavaScript (i klienten). Utan det kommer i nästa inlämningsuppgift där du ska använda dig av ditt API från denna uppgift.
@@ -11,6 +9,9 @@ Hämta alla produkter (sedan nedan på vad en produkt ska innehålla).
 Kunna lägga till produkter i en varukorg.
 Kunna ta bort produkter i varukorgen.
 Hämta varukorgen med alla tillagda produkter.
+Man ska inte kunna lägga till samma produkt i varukorgen igen.
+Man ska få ett felmeddelande om man försöker lägga till en produkt som inte finns.
+Man ska få ett felmeddelande om man försöker ta bort en produkt som inte finns.
 En produkt ska innehålla följande:
 
 Namn
