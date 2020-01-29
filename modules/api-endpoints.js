@@ -3,7 +3,6 @@ const express = require("express");
 const router = express.Router(); // Adds the router() module from express to const router
 const db = require("./functions-db"); // Imports functions from functions-db
 
-
 //Endpoint "/" shows all the products with a get request
 router.get("/products", async (req, res) => {
   const data = await db.getProducts();
@@ -15,7 +14,6 @@ router.get("/products", async (req, res) => {
   res.send(message);
 });
 
-
 //Endpoint "cart" shows all the cart-items with a get request
 router.get("/cart", async (req, res) => {
   const data = await db.getCart();
@@ -26,7 +24,6 @@ router.get("/cart", async (req, res) => {
   };
   res.send(message);
 });
-
 
 //Endpoint "cart/add/:id" adds item to cart with a post request
 router.post("/cart/add/:id", async (req, res) => {
@@ -56,7 +53,6 @@ router.post("/cart/add/:id", async (req, res) => {
   }
 });
 
-
 //Endpoint "cart/remove/:id" removes item from cart with a delete request
 router.delete("/cart/remove/:id", async (req, res) => {
   const deletedItem = await db.removeFromCart(req.params.id);
@@ -77,6 +73,5 @@ router.delete("/cart/remove/:id", async (req, res) => {
     res.send(message); // Sends the message-object as response
   }
 });
-
 
 module.exports = router; //Exports router module

@@ -1,11 +1,11 @@
 // Imports
 const express = require("express");
 const app = express();
-let routes = require("./modules/routes");
+const endpoints = require("./modules/api-endpoints");
 const db = require("./modules/init-db");
 const port = process.env.PORT || 7000;
 
-app.use("/", routes); // Uses endpoints from routes.js
+app.use("/", endpoints); // Uses endpoints from endpoints.js
 
 // LISTENS AT PORT 7000 AND INITIATES DATABASES
 app.listen(port, () => {
