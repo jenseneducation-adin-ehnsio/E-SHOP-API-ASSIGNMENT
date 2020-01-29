@@ -5,7 +5,7 @@ let routes = require("./modules/routes");
 const db = require("./modules/init-db");
 const port = process.env.PORT || 7000;
 
-app.use("/", routes); // Uses endpoints from router.js
+app.use("/", routes); // Uses endpoints from routes.js
 
 // LISTENS AT PORT 7000 AND INITIATES DATABASES
 app.listen(port, () => {
